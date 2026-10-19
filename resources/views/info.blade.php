@@ -30,6 +30,23 @@
                     <dd class="font-semibold text-slate-900">Belajar Laravel</dd>
                 </div>
             </dl>
+
+            <div class="border-t border-slate-100 bg-slate-50 px-8 py-8">
+                <div class="rounded-2xl border border-amber-200 bg-amber-50 p-5">
+                    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-amber-600">Logout</p>
+                    <h2 class="mt-2 text-2xl font-bold text-slate-900">Keluar dari aplikasi</h2>
+                    <p class="mt-2 text-sm text-slate-600">Anda dapat keluar dari sesi aplikasi dan kembali ke halaman
+                        login.</p>
+
+                    <form method="POST" action="{{ url('/login') }}" class="mt-5 flex flex-col gap-3 sm:flex-row">
+                        @csrf
+                        <button type="submit"
+                            class="inline-flex items-center justify-center rounded-xl bg-red-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-200">
+                            Logout
+                        </button>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
 </body>
